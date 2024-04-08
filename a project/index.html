@@ -1,0 +1,35 @@
+!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory game</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Memory game</h1>
+
+    <div class="cards-container">
+      <div class="card red" id="red"></div>
+      <div class="card blue" id="blue"></div>
+      <div class="card yellow" id="yellow"></div>
+      <div class="card green" id="green"></div>
+    </div>
+
+    <button id="start-button">Start game!</button>
+
+    <div class="on-game-container hidden" id="on-game-container">
+      <p id="instructions">Click on the squares in the order they were displayed!</p>
+      <div class="results" id="results">
+        <p id="results-text">Results:</p>
+
+        <div class="results-container" id="results-container">
+          <!-- <div class="correct-result"></div>
+          <div class="wrong-result"></div> -->
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
