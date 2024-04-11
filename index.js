@@ -1,43 +1,61 @@
-let shuffledColors = [];
-let turn = 0;
-
 const squareRedEL = document.querySelector("#squareRed");
 const squareBlueEL = document.querySelector("#squareBlue");
 const squareGreenEL = document.querySelector("#squareGreen");
 const squareYellowEL = document.querySelector("#squareYellow");
-
 const startButtomEL = document.querySelector("#start");
+const nextButtonEl = document.querySelector("#next");
+
+nextButtonEl.style.visibility = "hidden";
+
+let shuffledColors = [];
+let turn = 0;
+let clickedColor = [];
+
+shuffledColors = [getRandomColor(), getRandomColor()];
 
 squareRedEL.addEventListener("click", () => {
-  checkColors(turn, document.querySelector("#squareRed"));
+  checkColors(document.querySelector("#squareRed"), turn);
   turn++;
 });
+
 squareBlueEL.addEventListener("click", () => {
-  checkColors(turn, document.querySelector("#squareBlue"));
+  checkColors(document.querySelector("#squareBlue"), turn);
   turn++;
 });
 squareGreenEL.addEventListener("click", () => {
-  checkColors(turn, document.querySelector("#squareGreen"));
+  checkColors(document.querySelector("#squareGreen"), turn);
   turn++;
 });
 squareYellowEL.addEventListener("click", () => {
-  checkColors(turn, document.querySelector("#squareYellow"));
+  checkColors(document.querySelector("#squareYellow"), turn);
   turn++;
 });
 
 startButtomEL.addEventListener("click", () => startGame());
 
-//setTimeout(resetSquaresColors, 7000);
+nextButtonEl.addEventListener("click", () => StartNextRound());
 
-function checkColors(turn, clickedColor) {
-  if (clickedColor === shuffledColors[turn]) {
+function displayNextRoundButton() {
+  nextButtonEl.style.visibility = "visible";
+}
+
+function getRandomArray() {
+  let randomArray = [];
+  randomArray.length = shuffledColors.length + 1;
+  for (let i = 0; i < randomArray.length; i++)
+    randomArray.fill(getRandomColor(), i);
+
+  return (shuffledColors = randomArray);
+}
+
+function checkColors(element, turn) {
+  if (element === shuffledColors[turn]) {
     playCorrectSound();
 
     if (turn === shuffledColors.length - 1) {
       playWeeSound();
-      alert("You won!");
-      alert("reload webpage to start again");
-      setTimeout(() => {}, 3000);
+      alert("You won! max point: " + (turn + 1));
+      displayNextRoundButton();
     }
   } else {
     playWrongSound();
@@ -46,6 +64,13 @@ function checkColors(turn, clickedColor) {
   }
 }
 
+function StartNextRound() {
+  turn = 0;
+  getRandomArray();
+  resetSquares();
+  displayDisapearSquares();
+  setTimeout(resetSquaresColors, (shuffledColors.length + 1) * 1000);
+}
 function playBeepSound() {
   const beep = new Audio("sounds/digital-beeping-151921.mp3");
   beep.play();
@@ -87,16 +112,9 @@ function startGame() {
   document.getElementById("heading1").style.visibility = "hidden";
   resetSquares();
   displayDisapearSquares();
-  setTimeout(resetSquaresColors, 6000);
+  setTimeout(resetSquaresColors, (shuffledColors.length + 1) * 1000);
 }
-
 function displayDisapearSquares() {
-  shuffledColors = [
-    getRandomColor(),
-    getRandomColor(),
-    getRandomColor(),
-    getRandomColor(),
-  ];
   console.log(shuffledColors);
 
   for (let i = 0; i < shuffledColors.length; i++) {

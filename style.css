@@ -27,8 +27,15 @@ background-color: green;}
 .squareYellow { width: 50vw;height:40vh;
 background-color: yellow;}
 
+
+.buttons { position: relative;}
+
 .start {display: flex;justify-content: center;margin: auto; 
     padding: 5px; border-width: 2px;border-radius: 3px; 
     font-family: Arial, Helvetica, sans-serif;
     font-variant:small-caps}
 
+.next { position: absolute ; top: 0vh;left:40vw; margin: auto; 
+    padding: 5px; border-width: 2px;border-radius: 3px; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-variant:small-caps,}
