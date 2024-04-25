@@ -5,37 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
-    <br>
+
+   
+<header id="header">
 
     <h1 class="heading1" id="heading1"> memory color game</h1>
-    <br>
+
+    <div class="buttons">
+        <br>
+        <button class="start" id="start">start</button>
+       
+        <br>
+    </div>
+   
+</header>
+
+<div id="wrapperPointNext" class="wrapperPointNext">
+
+    <p id="points" class="points"> max points: </p>
+    <button class="next"  id="next">next round</button>
+
+</div>
+
+<div id="winner" class="winner">
+
+    <p id="points" class="points"> You Won!</p>
+</div>
+
+<div id="loser" class="loser">
+  <p id="points" class="points"> You Lost!</p>
+</div>
 <div class="squares">
     
 <div class="squaresUp" id="squaresUp" >
     
-    <div class="squareRed" id="squareRed"></div>  
+    <button class="squareRed" id="squareRed"></button>  
   
-    <div class="squareBlue" id="squareBlue"></div>
+    <button class="squareBlue" id="squareBlue"></button>
 
 </div>
 
 <div class="squaresDown" id= "squaresDown">
 
-    <div class="squareYellow" id="squareYellow"></div>
+    <button class="squareYellow" id="squareYellow"></button>
    
-    <div class="squareGreen" id = "squareGreen"></div>
+    <button class="squareGreen" id = "squareGreen"></button>
 
-</div>
-
-</div>
-<br>
-<div class="buttons">
-    <button class="start" id="start">start</button>
-    <button class="next"  id="next">next round</button>
-    <br>
-</div>
     <script src="index.js"></script>
 </body>
 </html>
