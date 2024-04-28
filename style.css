@@ -82,6 +82,7 @@ position: relative;}
              animation-name: bottonColor;
              animation-iteration-count: infinite;
              cursor: pointer;
+             -webkit-text-fill-color: black;
             }
 
             .start:active{
@@ -142,6 +143,7 @@ position: relative;}
               animation-name: bottonColor;
               animation-iteration-count: infinite;
               cursor: pointer;
+              -webkit-text-fill-color: black;
              }
 
              .next:active{
