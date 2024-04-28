@@ -131,6 +131,7 @@ function getRandomArray() {
 //function start button, next round button
 
 function startGame() {
+  shuffledColors = [getRandomColor(), getRandomColor()];
   userArray = [];
   turn = 0;
   document.getElementById("start").style.visibility = "hidden";
