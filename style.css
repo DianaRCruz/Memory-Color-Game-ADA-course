@@ -336,6 +336,7 @@ position: relative;}
               overflow: hidden;}
             .start{margin: 0.2dvb; 
               overflow: hidden; 
+              border-color: rgb(128, 125, 125);
             } }
 
           @media screen and (max-width: 540px) {
@@ -349,10 +350,12 @@ position: relative;}
               margin-bottom: 3vh;
               overflow: hidden;}
               .start{margin-top: 3dvb; 
-              overflow: hidden; }
+              overflow: hidden;
+              border-color: rgb(128, 125, 125) }
            .next{
             margin: 3px; 
-            padding: 1px; 
+            padding: 1px;
+            border-color: rgb(128, 125, 125) 
               }
           }}
 
@@ -367,14 +370,16 @@ position: relative;}
                 overflow: hidden; 
               margin-bottom: 3vh;}
               .start{margin-top: 3dvb;  
-                overflow: hidden;}
+                overflow: hidden;
+                border-color: rgb(128, 125, 125)}
               .next {
                 margin: 2px; 
-                padding: 1px; 
+                padding: 1px;
+                border-color: rgb(128, 125, 125) 
               }
           }}
 
-          @media screen and (max-width: 377px) {
+          @media screen and (max-width: 390px) {
             body {max-width: 100%;
               max-height: 100%;
               overflow-y: hidden; }
@@ -385,10 +390,15 @@ position: relative;}
                 overflow: hidden; 
               margin-bottom: 5vw;}
               .start{margin: 0.2dvb;  
-                overflow: hidden;}
+                overflow: hidden;
+                border-color: rgb(128, 125, 125)}
                .next {
-                margin: 2px; 
-                padding: 1px;}}
+                margin: 1px; 
+                padding: 2px;
+                border-color: rgb(128, 125, 125)}
+              .points{
+                font-size: smaller;
+              }}
 
           @media screen and (max-width: 307px) {
             body {max-width: 100%;
@@ -406,11 +416,15 @@ position: relative;}
                 margin: 5px;  
                 overflow: hidden;
                 padding: 7px; 
-                border-width: 3px;}
+                border-width: 3px;
+                border-color: rgb(128, 125, 125)}
                .next {
-               margin: 2px; 
-               padding: 1px; 
-          }}
+               margin: 1px; 
+               padding: 2px; 
+               border-color: rgb(128, 125, 125)}
+
+               .points{
+                font-size: smaller;} }
 
 
 
