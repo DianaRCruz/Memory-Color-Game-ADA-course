@@ -354,7 +354,7 @@ position: relative;}
               border-color: rgb(128, 125, 125) }
            .next{
             margin: 3px; 
-            padding: 1px;
+            padding: 4px;
             border-color: rgb(128, 125, 125) 
               }
           }}
@@ -374,7 +374,7 @@ position: relative;}
                 border-color: rgb(128, 125, 125)}
               .next {
                 margin: 2px; 
-                padding: 1px;
+                padding: 4px;
                 border-color: rgb(128, 125, 125) 
               }
           }}
@@ -393,8 +393,8 @@ position: relative;}
                 overflow: hidden;
                 border-color: rgb(128, 125, 125)}
                .next {
-                margin: 1px; 
-                padding: 2px;
+                margin: 2px; 
+                padding: 4px;
                 border-color: rgb(128, 125, 125)}
               .points{
                 font-size: smaller;
@@ -420,7 +420,7 @@ position: relative;}
                 border-color: rgb(128, 125, 125)}
                .next {
                margin: 1px; 
-               padding: 2px; 
+               padding: 4px; 
                border-color: rgb(128, 125, 125)}
 
                .points{
